@@ -17,11 +17,17 @@ export default function App() {
     });
   };
 
+  const submitHandler = (text) => {
+    setTodos((prevTodos) => {
+      return [{ text: text, key: Math.random().toString() }, ...prevTodos];
+    });
+  };
+
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.content}>
-        {/* {todo form} */}
+        <AddTodo />
         <View style={styles.list}>
           <FlatList
             data={todos}
