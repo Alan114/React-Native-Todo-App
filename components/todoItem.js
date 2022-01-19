@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     borderStyle: "dashed",
     borderRadius: 10,
     flexDirection: "row",
+    alignItems: "center",
   },
   itemText: {
     marginLeft: 12,

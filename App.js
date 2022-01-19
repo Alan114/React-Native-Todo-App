@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   StyleSheet,
-  Text,
   View,
   FlatList,
   Alert,
@@ -22,7 +21,7 @@ export default function App() {
 
   const pressHandler = (key) => {
     setTodos((prevTodos) => {
-      prevTodos.filter((todo) => todo.key != key);
+      return prevTodos.filter((todo) => todo.key !== key);
     });
   };
 
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   list: {
-    flex: 1,
     marginTop: 20,
+    flex: 1,
   },
 });
